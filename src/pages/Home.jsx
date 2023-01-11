@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import MovieCard from "../components/MovieCard";
+
+import "./MoviesGrid.css";
 
 //Aqui eu estou guardando os meus dados da API para poder consumir
 //dentro da home puxando elas do .env
@@ -31,7 +34,8 @@ const Home = () => {
       <h2 className="title">Melhores Filmes:</h2>
       <div className="movies-container">
         {topMovies.length === 0 && <p>Carregando...</p>}
-        {topMovies.length > 0 && topMovies.map((movie) => <p>{movie.title}</p>)}
+        {topMovies.length > 0 &&
+          topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
       </div>
     </div>
   );
