@@ -22,7 +22,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const topRatedUrl = `${moviesURL}top_rated?${apiKEY}`;
+    const topRatedUrl = `${moviesURL}top_rated?${apiKEY}&language=pt-BR`;
     //dentro de useEffect agora eu vou montar a url que preciso para buscar os filmes
     //melhores avaliados
 
